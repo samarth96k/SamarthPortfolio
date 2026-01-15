@@ -1,0 +1,84 @@
+.footer {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  /* Very light glass look */
+  background: rgba(255, 255, 255, 0.05); /* almost transparent */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+/* Horizontal line at the top */
+.footer-line {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+/* Footer top: name + icons row */
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Center name styling */
+.mid-topbar .topbar-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 0px;
+  /* width: 20%; */
+}
+
+/* Icons container */
+.footer-icons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Bottom text */
+.footer-bottom {
+  font-size: 0.95rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* Hover effect on icons inside footer */
+.footer-icons a {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.footer-icons a:hover {
+  transform: translateY(-3px) scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Responsive footer */
+@media (max-width: 600px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-icons {
+    justify-content: center;
+  }
+}

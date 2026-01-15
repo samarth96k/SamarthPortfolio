@@ -1,0 +1,16 @@
+.projects-container{
+    padding-top: 30px;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;      
+  align-items:stretch;     
+  padding: 1rem;
+}
+
+.projectContainerTitle{
+    padding: 10px;
+}

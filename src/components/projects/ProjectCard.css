@@ -1,0 +1,84 @@
+.card {
+  width: 320px;
+  height: 420px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* Front */
+.card-front {
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  height: 93%;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 1.2rem;
+}
+
+/* .tech img {
+  height: 24px;
+  margin-right: 6px;
+} */
+
+.actions a {
+  background: rgba(255,255,255,0.15);
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  margin-right: 8px;
+}
+
+/* BACK */
+.card-back {
+  background: #111;
+  color: white;
+  padding: 1.2rem;
+  transform: rotateY(180deg);
+}
+
+.limelight-regular {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.projectTtile{
+  font-size: x-large;
+}
+
+.status-badge{
+  color: rgb(1, 248, 1);
+  font-weight: 900;
+}

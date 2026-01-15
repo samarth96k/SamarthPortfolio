@@ -1,0 +1,9 @@
+.header{
+    display: flex;
+    /* position :absolute;
+    right: 0px;
+    left:0px;
+    top:0px; */
+    padding-top: 5px;
+    /* background-color: #001230; */
+}

@@ -1,0 +1,56 @@
+.about-div{
+  display: flex;
+}
+
+.about-left{
+  width: 40%;
+  display: flex;
+  align-items: flex-start;   /* instead of center */
+  justify-content: center;
+  padding-top: 0;            /* REMOVE top padding */
+}
+
+
+.about-right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* padding-top: 10%;          aligns with image vertically */
+  /* gap: 5%;                 space between title & intro */
+}
+
+
+.about-pic {
+  width: 300px;        /* adjust size */
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;   /* IMPORTANT */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-pic-tag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* prevents distortion */
+  border-radius: 50%;
+}
+
+.about-title h1{
+  /* top: 1px;  */
+  margin-top:0px
+}
+
+.about-desc{
+  width: 75%;
+  text-align: center;
+  padding-left: 12.5%;
+  line-height: 25px;
+}
+
+.about-div{
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
