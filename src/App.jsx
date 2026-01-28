@@ -9,6 +9,7 @@ import About from "./components/about/about"
 import Contact from './components/contact/contact.jsx'
 import Footer from './components/footer/footer.jsx'
 import TechStack from './components/techstack/TechStack.jsx'
+import Experience from './components/experience/Experience.jsx'
 function App() {
   {/* <Header />   */}
 
@@ -16,10 +17,11 @@ function App() {
     <div>
       <Opening_page />
       <About /> 
-      <TechStack />
+      <TechStack />   
+      <Experience />
       <h1 className='limelight-regular'>Education</h1> 
       <Education />
-      <Projects />      
+      <Projects />
       <Contact />
       <Footer />
     </div>

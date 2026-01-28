@@ -78,7 +78,6 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "EJS"],
     desc: "A full-stack blogging platform built with Node.js, Express, and EJS, featuring dynamic views and a modal-based interface for creating new posts. Designed to refine backend fundamentals and frontend skills, with upcoming support for multi-user authentication.",
     date: "2025",
-    status:""
   },
 ];
 
