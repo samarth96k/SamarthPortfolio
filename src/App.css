@@ -110,3 +110,17 @@ html {
   color:white;
   font-size: x-large;
 }
+
+.background-layer {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1000;
+  pointer-events: none;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
