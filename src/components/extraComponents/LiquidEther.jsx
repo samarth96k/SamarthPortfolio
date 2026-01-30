@@ -3,11 +3,11 @@ import * as THREE from 'three';
 import './LiquidEther.css';
 
 export default function LiquidEther({
-  mouseForce = 20,
+  mouseForce = 10,
   cursorSize = 100,
   isViscous = false,
   viscous = 30,
-  iterationsViscous = 32,
+  iterationsViscous = 320,
   iterationsPoisson = 32,
   dt = 0.014,
   BFECC = true,
@@ -17,11 +17,11 @@ export default function LiquidEther({
   style = {},
   className = '',
   autoDemo = true,
-  autoSpeed = 0.5,
+  autoSpeed = 0.2,
   autoIntensity = 2.2,
-  takeoverDuration = 0.25,
+  takeoverDuration = 20,
   autoResumeDelay = 1000,
-  autoRampDuration = 0.6
+  autoRampDuration = 0.2
 }) {
   const mountRef = useRef(null);
   const webglRef = useRef(null);

@@ -5,7 +5,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
+  /* background-color: #3A3238; */
+  background-color: #0f0221;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -67,8 +69,6 @@ button:focus-visible {
   }
 }
 
-  
-
 * {
   margin: 0;
   padding: 0;
@@ -79,4 +79,47 @@ html, body, #root {
   width: 100%;
   min-height: 100%;
   background: transparent;
+}
+
+
+.barrio-regular {
+  font-family: "Barrio", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* src/index.css */
+
+@font-face {
+    font-family: 'Agaleoz';
+    src: url('./assets/fonts/Agaleoz_font/Agaleoz.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* src/index.css */
+
+/* Regular */
+@font-face {
+    font-family: 'Aquire';
+    src: url('./assets/fonts/Aquire_font/Aquire.woff') format('woff');
+    font-weight: 400;  /* normal */
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Aquire-Bold';
+    src: url('./assets/fonts/Aquire_font/Aquire-Bold.woff') format('woff');
+    font-weight: 700;  /* bold */
+    font-style: normal;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Aquire-Light';
+    src: url('./assets/fonts/Aquire_font/Aquire-Light.woff') format('woff');
+    font-weight: 300;  /* light */
+    font-style: normal;
 }

@@ -49,25 +49,6 @@
   width: 100%;
 }
 
-/* =========================================
-   LEFT IMAGE SECTION
-========================================= */
-/* .opening-left {
-  grid-column: 1;
-  grid-row: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.opening-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 2px;
-  object-fit: cover;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  animation: fadeIn 1.2s ease-out;
-} */
 
 /* =========================================
    RIGHT INTRO SECTION
@@ -77,29 +58,6 @@
   grid-row: 2;
   /* padding-right: 4rem; */
 }
-
-/* Typing main heading (same as before)
-.typing-text {
-  font-size: 3rem;
-  font-weight: 700;
-  white-space: nowrap;
-  overflow: hidden;
-  width: fit-content;
-  border-right: 4px solid white;
-  animation: typing 3s steps(30), blink 0.6s step-end infinite;
-  text-align: left;
-  font-size: clamp(2rem, 5vw, 4.8rem);
-  line-height: 1.15;
-  font-weight: 700;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-@keyframes blink {
-  50% { border-color: transparent; }
-} */
 
 .typing-text {
   font-size: clamp(2rem, 5vw, 4.8rem);
@@ -303,7 +261,6 @@
   transition: transform 0.2s ease, filter 0.2s ease;    /* space between icons */
 }
 
-
 .github{
   width: 30px;
   height: 30px;
@@ -359,6 +316,69 @@
   height: 20px;
 }
 
-.view-work-button{
-  background-color: orange;
+.view-work-button {
+  margin-top: 20px;
+  background-color: black;
+  border: 1px solid white; 
+}
+
+/* =====================================================
+   MOBILE TEXT OVERFLOW FIX — TYPING HERO
+===================================================== */
+
+@media (max-width: 768px) {
+
+  /* ---- GLOBAL TEXT SAFETY ---- */
+  .opening-wrapper,
+  .opening-right,
+  .typing-text,
+  .typing-subtext {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  /* ---- DISABLE HARD TYPING WIDTHS ---- */
+  .line {
+    white-space: normal;        /* ALLOW wrapping */
+    width: auto !important;     /* OVERRIDE typing width */
+    border-right: none;         /* Remove cursor */
+    animation: none !important; /* Stop typing animation */
+  }
+
+  /* ---- REPLACE WITH FADE (MOBILE) ---- */
+  .typing-text {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+
+  .typing-subtext {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-delay: 0.4s;
+  }
+
+  /* ---- FONT SCALING (STRICT) ---- */
+  .typing-text {
+    font-size: clamp(1.6rem, 6.5vw, 2.2rem);
+    line-height: 1.25;
+  }
+
+  .typing-subtext {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+    line-height: 1.4;
+    margin-top: 8px;
+  }
+}
+
+/* ---- EXTRA SMALL PHONES ---- */
+@media (max-width: 380px) {
+
+  .typing-text {
+    font-size: 1.45rem;
+  }
+
+  .typing-subtext {
+    font-size: 0.8rem;
+  }
 }

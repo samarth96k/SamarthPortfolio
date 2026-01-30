@@ -1,13 +1,3 @@
-/* *{
-  background-color: #001230;
-background-image: url("https://www.transparenttextures.com/patterns/checkered-light-emboss.png");
-
-} */
-
-/* h1{
-  font-size: larger;
-} */
-
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -123,4 +113,8 @@ html {
 main {
   position: relative;
   z-index: 1;
+}
+
+body {
+  font-family: 'Satoshi-Variable', sans-serif;
 }

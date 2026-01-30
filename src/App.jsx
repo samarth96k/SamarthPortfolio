@@ -56,7 +56,6 @@ function App() {
         <Experience />
         <h1>Education</h1>
         <Education />
-
         <Projects />
         <Contact />
         <Footer />
