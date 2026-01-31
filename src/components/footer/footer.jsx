@@ -20,7 +20,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="footer-bottom">
+      <div className="footer-bottom inknut-antiqua-medium">
         Made With ❤️ by Samarth!
       </div>
     </div>

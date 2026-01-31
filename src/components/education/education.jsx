@@ -9,7 +9,7 @@ function EdLogo(){
 
 export default function Education(){
     return (
-    <div class="Education">
+    <div className="Education">
     <EdCard
         inst_name="VIT Bhopal University"
         degree_name="Computer Science and Engineering"

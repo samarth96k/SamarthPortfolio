@@ -72,3 +72,179 @@
   background: rgba(150, 150, 150, 0.15);
   color: #ccc;
 }
+
+/* GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* was 140px */
+  gap: 1.5rem; /* was 2rem */
+}
+
+/* CARD */
+.skill-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border-radius: 14px; /* slightly tighter */
+  padding: 1.1rem 0.8rem; /* reduced */
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* ICON */
+.skill-card img {
+  width: 40px;   /* was 48px */
+  height: 40px;
+  margin-bottom: 0.6rem;
+}
+
+/* NAME */
+.skill-card h3 {
+  font-size: 0.85rem; /* was 0.95rem */
+  margin-bottom: 0.3rem;
+}
+
+/* LEVEL BADGE */
+.skill-level {
+  font-size: 0.65rem; /* was 0.7rem */
+  padding: 3px 8px;   /* tighter pill */
+  border-radius: 10px;
+  font-weight: 600;
+}
+/* GRID */
+.skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); /* was 120px */
+  gap: 1.3rem; /* was 1.5rem */
+}
+
+/* CARD */
+.skill-card {
+  border-radius: 13px;
+  padding: 1rem 0.7rem; /* slightly tighter */
+}
+
+/* ICON */
+.skill-card img {
+  width: 36px;   /* was 40px */
+  height: 36px;
+  margin-bottom: 0.5rem;
+}
+
+/* NAME */
+.skill-card h3 {
+  font-size: 0.82rem; /* was 0.85rem */
+  margin-bottom: 0.25rem;
+}
+
+/* LEVEL BADGE */
+.skill-level {
+  font-size: 0.62rem;
+  padding: 3px 7px;
+  border-radius: 9px;
+}
+/* =====================================================
+   MOBILE RESPONSIVE — TECH STACK
+===================================================== */
+
+@media (max-width: 768px) {
+
+  /* SECTION SPACING */
+  .skills {
+    padding: 3.5rem 6%;
+    padding-top: 10px;
+  }
+
+  .skills-title {
+    font-size: 2.1rem;
+    font-family: "Aquire";
+    text-align: center;
+  }
+
+  .skills-subtitle {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  /* GRID: FORCE CLEAN COLUMNS */
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 clean columns */
+    gap: 1.1rem;
+  }
+
+  /* CARD */
+  .skill-card {
+    padding: 0.95rem 0.6rem;
+    border-radius: 14px;
+  }
+
+  /* ICON */
+  .skill-card img {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* NAME */
+  .skill-card h3 {
+    font-size: 0.8rem;
+  }
+
+  /* LEVEL BADGE */
+  .skill-level {
+    font-size: 0.6rem;
+    padding: 3px 6px;
+  }
+}
+
+/* ---- SMALL PHONES (iPhone SE, compact Android) ---- */
+@media (max-width: 420px) {
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 1rem;
+  }
+
+  .skill-card {
+    padding: 0.9rem 0.55rem;
+  }
+
+  .skill-card img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .skill-card h3 {
+    font-size: 0.78rem;
+  }
+}
+
+/* ---- ULTRA SMALL / SAFETY ---- */
+@media (max-width: 360px) {
+
+  .skills-grid {
+    gap: 0.9rem;
+  }
+
+  .skill-card {
+    padding: 0.85rem 0.5rem;
+  }
+}
+
+/* ================================
+   TechStack scroll animation ONLY
+================================ */
+
+.skill-hidden {
+  opacity: 0;
+  transform: translateY(-35px);
+  transition: opacity 1s ease, transform 1s ease;
+  will-change: opacity, transform;
+}
+
+.slide-top {
+  transform: translateY(-35px);
+}
+
+.skill-show {
+  opacity: 1;
+  transform: translateY(0);
+}

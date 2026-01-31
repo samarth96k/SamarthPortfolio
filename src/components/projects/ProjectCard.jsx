@@ -10,7 +10,6 @@ function ProjectCard({
   tech = [],
   desc,
   date,
-  categories = [],
   status,
   learned,
   role,
@@ -28,53 +27,26 @@ function ProjectCard({
           className="card-front"
           style={{ backgroundImage: `url(${image})` }}
         >
-          <div className="overlay">
-            {/* Categories badges */}
-            {categories.length > 0 && (
-              <div className="categories">
-                {categories.map((cat, i) => (
-                  <span key={i} className="category-badge">
-                    🏷️{cat}
-                  </span>
-                ))}
-              </div>
-            )}
+          <div className="overlay glass-overlay">
+            <div>
+              <h3 className="limelight-regular projectTitle" style={{fontFamily:"Aquire"}}>{title}</h3>
+              <p className="status-badge">{status}</p>
+            </div>
 
-            {/* Status badge (only if In Progress) */}
-            {status === "In Progress" && (
-              <div className="status-badge">⏳{status}❯❯❯❯</div>
-            )}
+            <div className="tech">
+              {tech.map((t, i) => (
+                <TechElement key={i} tech={t} />
+              ))}
+            </div>
 
-            {/* Title */}
-              <h3 className="projectTtile">{title}</h3>
-            {/* Tech icons */}
-            {tech.length > 0 && (
-              <div className="tech">
-                {tech.map((icon, i) => (
-                  <TechElement tech={icon} key={i} />
-                ))}
-              </div>
-            )}
-
-            {/* Action buttons */}
             <div className="actions">
               {github && (
-                <a
-                  href={github}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                >
+                <a href={github} target="_blank" onClick={(e) => e.stopPropagation()} className="google-sans-code">
                   GitHub
                 </a>
               )}
-              {live && live !== "Not Hosted As Of Now" && (
-                <a
-                  href={live}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                >
+              {live && (
+                <a href={live} target="_blank" onClick={(e) => e.stopPropagation()}>
                   Live
                 </a>
               )}
@@ -83,26 +55,12 @@ function ProjectCard({
         </div>
 
         {/* BACK */}
-        <div className="card-back">
-          <h3>{title}</h3>
-
-          <p className="desc">{desc}</p>
-
-          {/* Optional learned / skills */}
-          {learned && (
-            <p className="learned">
-              <strong>What I learned:</strong> {learned}
-            </p>
-          )}
-
-          {/* Optional role */}
-          {role && (
-            <p className="role">
-              <strong>Role:</strong> {role}
-            </p>
-          )}
-
-          <small>Built in {date}</small>
+        <div className="card-back glass-back">
+          <h3 className="limelight-regular">{title}</h3>
+          <p>{desc}</p>
+          <p><strong>Role:</strong> {role}</p>
+          <p><strong>Learned:</strong> {learned}</p>
+          <p><strong>Date:</strong> {date}</p>
         </div>
       </div>
     </div>
@@ -110,4 +68,3 @@ function ProjectCard({
 }
 
 export default ProjectCard;
-

@@ -1,8 +1,8 @@
 import React from "react";
 import AlternateTimeline from "./AlternateTimeline";
 function Experience(){
-    return (<div>
-        <h1>Experience</h1>
+    return (<div class="experience-div">
+        <h1 style={{fontFamily:"Aquire"}} className="experience-title">Experience</h1>
         <AlternateTimeline />
     </div>);
 }

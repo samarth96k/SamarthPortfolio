@@ -8,15 +8,13 @@
   position: sticky;
   max-width: 900px;
   margin: 0 auto 100px;
-
   background: linear-gradient(135deg, #1e293b, #020617);
   color: #f8fafc;
-
   padding: 2.5rem;
   min-height: 280px;
   border-radius: 18px;
 
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 3px 70px rgba(20, 22, 36, 0.45);
 
   /* 🔒 HARD SHIMMER KILL */
   transform: none !important;

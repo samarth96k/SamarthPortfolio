@@ -1,0 +1,135 @@
+/* -------------------------------- */
+/* DESKTOP (UNCHANGED) */
+/* -------------------------------- */
+
+.timeline-root {
+  padding: 40px 0;
+}
+
+.timeline-dot {
+  background-color: white !important;
+  border: 2px solid white !important;
+  width: 14px !important;
+  height: 14px !important;
+  min-width: 14px !important;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+.timeline-connector {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.glass-card {
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 18px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  transition: 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+/* -------------------------------- */
+/* 📱 MOBILE REDESIGN */
+/* -------------------------------- */
+
+@media (max-width: 768px) {
+
+  /* Remove alternate timeline behaviour */
+  .MuiTimelineItem-root::before {
+    display: none;
+  }
+
+  /* Hide middle separator and dots */
+  .MuiTimelineSeparator-root {
+    display: none;
+  }
+
+  /* Hide opposite content (time) */
+  .MuiTimelineOppositeContent-root {
+    display: none;
+  }
+
+  /* Make content full width */
+  .MuiTimelineContent-root {
+    width: 100%;
+    padding-left: 0 !important;
+  }
+
+  /* Stack timeline items */
+  .timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  /* Connecting white vertical line */
+  .timeline-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+    width: 2px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  /* Glass card styling for mobile */
+  .glass-card {
+    padding: 18px;
+    border-radius: 14px;
+    width: 100%;
+  }
+
+  .timeline-title {
+    font-size: 1.1rem;
+  }
+
+  .timeline-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width: 480px) {
+
+  .glass-card {
+    padding: 16px;
+  }
+
+  .timeline-title {
+    font-size: 1rem;
+  }
+
+  .timeline-description {
+    font-size: 0.85rem;
+  }
+}
+
+.experience-div{
+    padding-bottom: 40px;
+}
+
+.experience-title{
+    padding-bottom: 30px;
+}
+
+/* ----------------------------- */
+/* FADE IN ANIMATION FOR TIMELINE */
+/* ----------------------------- */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease-out, transform 0.8s ease-out;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

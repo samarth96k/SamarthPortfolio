@@ -42,6 +42,7 @@ function Icons(){
             target="_blank"
             rel="noopener noreferrer"
             className="resume-button-top-bar"
+            style={{fontFamily:"Aquire-Bold"}}
           >
             Resume
             <img className="resume-icon" src="Download.png" alt="Download Resume" />

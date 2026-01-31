@@ -1,5 +1,3 @@
-
-
 const techstackdata = [
   { skill: "React", link: "tech_stack_section/react.svg", level: "Strong" },
   { skill: "JavaScript", link: "tech_stack_section/icons8-javascript.svg", level: "Strong" },

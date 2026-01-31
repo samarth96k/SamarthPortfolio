@@ -22,45 +22,38 @@ function App() {
           autoDemo
         />
       </div>
-
       {/* FOREGROUND CONTENT */}
       <main>
-
         <Opening_page />
         <About />
-
         <TechStack />
-        <>
+        {/* <>
           <section style={{ padding: '1.5rem 3rem' }}>
-            <h1>Featured Projects</h1>
+            <h1 style={{ fontFamily: "Aquire" }}>Featured Projects</h1>
           </section>
-
           <ScrollStack>
             <ScrollStackItem>
-              <img src="github.svg" alt="" class="scrollstackimg"/>
+              <img src="github.svg" alt="" class="scrollstackimg" />
               <h2>Card One</h2>
               <p>This is the first card.</p>
             </ScrollStackItem>
-
             <ScrollStackItem>
               <h2>Card Two</h2>
               <p>No JS. No shimmer. Pure CSS.</p>
             </ScrollStackItem>
-
             <ScrollStackItem>
               <h2>Card Three</h2>
               <p>Submission safe.</p>
             </ScrollStackItem>
           </ScrollStack>
-        </>
+        </> */}
         <Experience />
-        <h1>Education</h1>
+        <h1 style={{fontFamily:"Aquire"}} className='education-title'>Education</h1>
         <Education />
         <Projects />
         <Contact />
         <Footer />
       </main>
-
     </>
   )
 }

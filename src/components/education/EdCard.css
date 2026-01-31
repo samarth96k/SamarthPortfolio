@@ -1,89 +1,151 @@
-.ed-card *{
-    padding: 0px;
-    margin: 0px;
+/* Reset all padding/margin inside card */
+.ed-card * {
+  padding: 0;
+  margin: 0;
 }
 
+/* Glass Card */
 .ed-card {
   width: 100%;
   max-width: 600px;
-  background-color: #111;
+  background: rgba(255, 255, 255, 0.08); /* transparent glass */
   color: #f1f1f1;
 
   padding: 1.2rem 1.5rem;
-  border-radius: 12px;
+  border-radius: 16px;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.4rem;
 
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  padding: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(14px); /* glass blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
   margin-top: 10px;
+  border: solid 1px white;
 }
 
-.ed-card{
-    display: flexbox;
-    flex-direction: row;
-    padding-left:25px ;
-    padding-top:10px;
-    
+.ed-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.ed-left-side{
-    width: 60%;
-    margin-left: 10px;
+/* Card sides */
+.ed-left-side {
+  width: 60%;
+  margin-left: 10px;
 }
 
-.ed-mid-side{
-    width:20%
-}
-
-.ed-right-side{
-    width: 20%;
+.ed-mid-side {
+  width: 20%;
   display: flex;
-  flex-direction: column;
-  align-items: center;   /* horizontal center */
-  justify-content: center; /* vertical center */
-}
-
-.ed-inst{
-    text-align: left;
-    font-size: 25px;
-    padding-bottom: 0px;
-}
-
-.board{
-    text-align: left;
-    padding-top: 0px;
-    color: rgb(108, 101, 101);
-}
-
-.degreeName{
-    text-align: left;
-    color: rgb(108, 101, 101);
-}
-
-.inst-imgsmall{
-    max-width: 80%;
-    max-height: 70%;
-}
-
-.inst-imglarge{
-    max-width: 80%;
-    max-height: 90%;
-}
-
-.ed-score{
-    display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.ed-duration{
-    color: rgb(203, 194, 194);;
+.ed-right-side {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.ed-score{
-    padding-top: 20px
-    ;
+
+/* Text styling */
+.ed-inst {
+  text-align: left;
+  font-size: 25px;
+  padding-bottom: 0;
+}
+
+.board {
+  text-align: left;
+  padding-top: 0;
+  color: rgb(180, 180, 180);
+}
+
+.degreeName {
+  text-align: left;
+  color: rgb(180, 180, 180);
+}
+
+.ed-duration {
+  color: rgb(200, 200, 200);
+}
+
+/* Score styling */
+.ed-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+/* Images */
+.inst-imgsmall {
+  max-width: 80%;
+  max-height: 70%;
+}
+
+.inst-imglarge {
+  max-width: 80%;
+  max-height: 90%;
+}
+
+@media (max-width: 768px) {
+  .ed-card {
+    flex-direction: row;       
+    padding: 0.6rem 0.8rem;    
+    width: 90%;                
+    margin: 10px auto;
+    min-height: auto;
+    gap: 0.5rem;               
+  }
+
+  .ed-left-side,
+  .ed-mid-side,
+  .ed-right-side {
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Image side */
+  .ed-right-side {
+    width: 25%;                
+  }
+
+  .inst-imgsmall,
+  .inst-imglarge {
+    max-width: 100%;            
+    max-height: 80%;            
+  }
+
+  /* Content side */
+  .ed-left-side {
+    width: 55%;                 
+    text-align: left;
+  }
+
+  .ed-mid-side {
+    width: 20%;                 
+  }
+
+  /* Text adjustments - INCREASED SIZE */
+  .ed-inst {
+    font-size: 1.2rem;          /* slightly bigger title */
+  }
+
+  .board,
+  .degreeName,
+  .ed-duration {
+    font-size: 0.85rem;         /* slightly bigger text */
+  }
+
+  .ed-score {
+    padding-top: 5px;
+  }
 }

@@ -118,3 +118,7 @@ main {
 body {
   font-family: 'Satoshi-Variable', sans-serif;
 }
+
+.education-title{
+  margin-bottom: 20px;
+}
