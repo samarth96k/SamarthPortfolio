@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -13,35 +14,34 @@ function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const formatMessage = () => {
-    return `
-Name: ${formData.fullName}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Enquiry Type: ${formData.enquiryType}
+  const sendEmailJS = () => {
+    const serviceID = "service_uxottht";       // Your Service ID
+    const templateID = "template_x4fbtgh";     // Your Template ID
+    const publicKey = "E3TN8dbhMocOktNw5";    // Your Public Key
 
-Message:
-${formData.message}
-    `;
-  };
-  const sendMail = () => {
-    const to = "samarthkhandelwal880@gmail.com";
-    const subject = encodeURIComponent("New Portfolio Enquiry");
-    const body = encodeURIComponent(formatMessage());
-
-    window.open(
-      `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`,
-      "_blank"
-    );
+    emailjs.send(serviceID, templateID, formData, publicKey)
+      .then((response) => {
+        alert("Message sent successfully! ✅");
+        // Reset form
+        setFormData({
+          fullName: "",
+          email: "",
+          enquiryType: "General_Enquiry",
+          phone: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        alert("Failed to send message. ❌ Try again later.");
+        console.error(error);
+      });
   };
 
   const sendWhatsApp = () => {
-    const text = encodeURIComponent(formatMessage());
-
-    window.open(
-      `https://wa.me/919773959744?text=${text}`,
-      "_blank"
+    const text = encodeURIComponent(
+      `Name: ${formData.fullName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nEnquiry Type: ${formData.enquiryType}\n\nMessage:\n${formData.message}`
     );
+    window.open(`https://wa.me/919773959744?text=${text}`, "_blank");
   };
 
   return (
@@ -94,8 +94,8 @@ ${formData.message}
         />
 
         <div className="contact-buttons">
-          <button type="button" onClick={sendMail}>
-            Send via Gmail
+          <button type="button" onClick={sendEmailJS}>
+            Send via Email
           </button>
 
           <button type="button" onClick={sendWhatsApp}>
