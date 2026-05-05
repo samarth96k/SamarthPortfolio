@@ -172,3 +172,30 @@ html, body, #root {
   font-weight: 100;
   font-style: normal;
 }
+.featured_project_buttons {
+  display: inline-flex;
+  gap: 12px;
+  padding: 6px 16px;
+  border-radius: 999px;
+
+  /* glass background */
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 14px;
+  /* font-weight: 500; */
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin:5px;
+  margin-top: 20px;
+}
+
+.featured_project_buttons:hover {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
