@@ -66,7 +66,16 @@ import projects from "./projectsdata";
 function Projects() {
   const [filter, setFilter] = useState("All");
   const itemsRef = useRef([]);
-
+const filterTags = [
+  "All",
+  "Backend",
+  "Full Stack",
+  "AI",
+  "Developer Tools",
+  "FinTech",
+  "Frontend",
+  "Machine Learning",
+];
   const filteredProjects =
     filter === "All"
       ? projects
@@ -96,25 +105,23 @@ function Projects() {
         className="projectContainerTitle"
         style={{ fontFamily: "Aquire-bold", fontSize: "50px" }}
       >
-        My Projects Archive
+        Projects Archive
       </div>
-
-      <div
-        className="filters glass-filters inknut-antiqua-light"
-        style={{ fontSize: "12px" }}
-      >
-        {["All", "React", "JavaScript", "Frontend", "Machine Learning", "Full Stack"].map(
-          (tag) => (
-            <button
-              key={tag}
-              className={filter === tag ? "active" : ""}
-              onClick={() => setFilter(tag)}
-            >
-              {tag}
-            </button>
-          )
-        )}
-      </div>
+      
+<div
+  className="filters glass-filters inknut-antiqua-light"
+  style={{ fontSize: "12px" }}
+>
+  {filterTags.map((tag) => (
+    <button
+      key={tag}
+      className={filter === tag ? "active" : ""}
+      onClick={() => setFilter(tag)}
+    >
+      {tag}
+    </button>
+  ))}
+</div>
 
       <p className="libertinus-serif-regular-italic hint-text">
         (Tap on the cards for more information)

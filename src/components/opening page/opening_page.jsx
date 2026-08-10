@@ -22,13 +22,47 @@ export default function Opening_page() {
         <button style={{ fontFamily: 'Aquire-Light'}}
           className="view-work-button"
           onClick={() => {
+            const element = document.querySelector(".skills");
+            if (element) {
+              element.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        >
+          Skills
+        </button>
+                <button style={{ fontFamily: 'Aquire-Light'}}
+          className="view-work-button"
+          onClick={() => {
+            const element = document.querySelector(".featuredProjectContainer");
+            if (element) {
+              element.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        >
+          Projects
+          
+        </button>
+                <button style={{ fontFamily: 'Aquire-Light'}}
+          className="view-work-button"
+          onClick={() => {
+            const element = document.querySelector(".Education");
+            if (element) {
+              element.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        >
+          Education
+        </button>
+                <button style={{ fontFamily: 'Aquire-Light'}}
+          className="view-work-button"
+          onClick={() => {
             const element = document.querySelector(".projects-container");
             if (element) {
               element.scrollIntoView({ behavior: "smooth" });
             }
           }}
         >
-          View My Work
+          VIEW PROJECTS
         </button>
       </div>
       {/* SCROLL INDICATOR */}

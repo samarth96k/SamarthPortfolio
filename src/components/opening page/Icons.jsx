@@ -38,7 +38,7 @@ function Icons(){
             <img className="github" src="whatsapp.svg" alt="WhatsApp Samarth" />
           </a></div>
           <a
-            href="/Resume.pdf"
+            href="/Resume (8).pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="resume-button-top-bar"

@@ -14,7 +14,7 @@ export default function Education(){
         inst_name="VIT Bhopal University"
         degree_name="Computer Science and Engineering"
         board="Bachelor in Technology"
-        cgpa="9.46"
+        cgpa="9.42"
         // percantage="87%"
         start="2023"
         end="2027"

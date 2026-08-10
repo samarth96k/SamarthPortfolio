@@ -317,6 +317,8 @@
 }
 
 .view-work-button {
+  margin-left: 6px;
+  margin-right: 6px;
   margin-top: 20px;
   background-color: black;
   border: 1px solid white; 
